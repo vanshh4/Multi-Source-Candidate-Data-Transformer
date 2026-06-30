@@ -1,0 +1,78 @@
+version: '1.0'
+output:
+  name: minimal_recruiter_view
+  fields:
+  - output_name: id
+    path: candidate_id
+    type: string
+    missing: error
+    normalization: trim
+    description: Stable candidate identifier.
+  - output_name: name
+    path: full_name
+    type: string
+    missing: 'null'
+    normalization:
+    - trim
+    - collapse_spaces
+    - title_case
+    description: Candidate name for recruiter display.
+  - output_name: email
+    path: emails
+    type: array
+    missing: omit
+    normalization:
+    - email_lowercase
+    - sorted_unique
+    description: Available candidate email addresses.
+  - output_name: phone
+    path: phones
+    type: array
+    missing: omit
+    normalization:
+    - e164_phone
+    - sorted_unique
+    description: Available candidate phone numbers.
+  - output_name: city
+    path: location.city
+    type: string
+    missing: 'null'
+    normalization:
+    - trim
+    - collapse_spaces
+    - title_case
+    description: Candidate city if available.
+  - output_name: headline
+    path: headline
+    type: string
+    missing: omit
+    normalization:
+    - trim
+    - collapse_spaces
+    description: Short professional headline.
+  - output_name: years_experience
+    path: years_experience
+    type: number
+    missing: 'null'
+    normalization: round_1_decimal
+    description: Total years of experience.
+  - output_name: skills
+    path: skills
+    type: array
+    missing: omit
+    normalization:
+    - skill_canonical
+    - sorted_unique
+    description: Candidate skills for quick screening.
+  - output_name: linkedin
+    path: links.linkedin
+    type: string
+    missing: omit
+    normalization: https_url
+    description: LinkedIn profile URL if available.
+options:
+  include_provenance: false
+  include_confidence: true
+  missing_default: omit
+  validation_mode: strict
+  additional_output_properties: false
