@@ -1,0 +1,68 @@
+{
+  "run_id": "sample_candidate_run_001",
+  "description": "Phase 4 normalization output. Merge, canonical building, and projection are not performed here.",
+  "normalized_candidate_count": 4,
+  "normalized_candidates": [
+    {
+      "field_path": "emails",
+      "raw_value": "SAMPLE@EXAMPLE.COM",
+      "normalized_value": "sample@example.com",
+      "source_id": "recruiter_csv",
+      "source_type": "recruiter_csv",
+      "source_name": "recruiter.csv",
+      "method": "csv_column_mapping",
+      "confidence": 0.95,
+      "normalization_method": "email_lowercase_validate",
+      "normalization_status": "ok",
+      "warnings": [],
+      "metadata": {
+        "column": "email",
+        "row_index": 0
+      }
+    },
+    {
+      "field_path": "phones",
+      "raw_value": "+91 99999 99999",
+      "normalized_value": "+919999999999",
+      "source_id": "resume_docx",
+      "source_type": "resume_docx",
+      "source_name": "vansh_resume.docx",
+      "method": "phone_regex",
+      "confidence": 0.85,
+      "normalization_method": "phone_e164_basic",
+      "normalization_status": "ok",
+      "warnings": [],
+      "metadata": {
+        "default_country": "IN"
+      }
+    },
+    {
+      "field_path": "links.linkedin",
+      "raw_value": "linkedin.com/in/samplecandidate/",
+      "normalized_value": "https://linkedin.com/in/samplecandidate",
+      "source_id": "resume_docx",
+      "source_type": "resume_docx",
+      "source_name": "vansh_resume.docx",
+      "method": "linkedin_regex",
+      "confidence": 0.9,
+      "normalization_method": "url_https_normalize",
+      "normalization_status": "ok",
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "field_path": "skills",
+      "raw_value": "powerbi",
+      "normalized_value": "Power BI",
+      "source_id": "resume_docx",
+      "source_type": "resume_docx",
+      "source_name": "vansh_resume.docx",
+      "method": "known_skill_dictionary_match",
+      "confidence": 0.75,
+      "normalization_method": "skill_alias_canonical",
+      "normalization_status": "ok",
+      "warnings": [],
+      "metadata": {}
+    }
+  ]
+}
