@@ -911,7 +911,7 @@ For demos, use anonymized data wherever possible.
 Run all tests:
 
 ```bash
-PYTHONPATH=src pytest tests
+set PYTHONPATH=src && pytest tests
 ```
 
 Run source reading:
@@ -923,20 +923,13 @@ PYTHONPATH=src python -m transformer.cli --manifest configs/sample_input_manifes
 Run full pipeline:
 
 ```bash
-PYTHONPATH=src python -m transformer.cli \
-  --manifest configs/sample_input_manifest.yaml \
-  --project \
-  --output data/outputs/projected_candidate_output.json
+set PYTHONPATH=src && python -m transformer.cli --manifest configs\sample_input_manifest.yaml --project --output data\outputs\projected_candidate_output.json
 ```
 
 Run full debug output:
 
 ```bash
-PYTHONPATH=src python -m transformer.cli \
-  --manifest configs/sample_input_manifest.yaml \
-  --project \
-  --include-intermediate \
-  --output data/outputs/full_debug_output.json
+set PYTHONPATH=src && python -m transformer.cli --manifest configs/sample_input_manifest.yaml --project --include-intermediate --output data/outputs/full_debug_output.json   
 ```
 
 Run minimal recruiter output:
@@ -952,5 +945,5 @@ PYTHONPATH=src python -m transformer.cli \
 Run UI:
 
 ```bash
-PYTHONPATH=src streamlit run ui/streamlit_app.py
+set PYTHONPATH=src && python -m streamlit run ui\streamlit_app.py
 ```
