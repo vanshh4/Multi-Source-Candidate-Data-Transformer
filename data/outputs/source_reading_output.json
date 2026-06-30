@@ -1,0 +1,69 @@
+{
+  "run_id": "sample_candidate_run_001",
+  "description": "Phase 2 source-reading output. Extraction, normalization, merge, and projection are not performed here.",
+  "manifest_path": "configs/sample_input_manifest.yaml",
+  "sources": [
+    {
+      "source_id": "recruiter_csv",
+      "source_type": "recruiter_csv",
+      "source_name": "recruiter.csv",
+      "path": "data/samples/recruiter.csv",
+      "required": false,
+      "status": "partial",
+      "content_type": "tabular",
+      "metadata": {
+        "encoding": "utf-8",
+        "row_count": 1,
+        "column_count": 7,
+        "columns": [
+          "candidate_name",
+          "email",
+          "phone",
+          "location",
+          "current_company",
+          "title",
+          "skills"
+        ],
+        "missing_expected_columns": [
+          "current_location",
+          "linkedin",
+          "github",
+          "portfolio",
+          "headline",
+          "years_experience"
+        ],
+        "extra_columns": [
+          "location",
+          "current_company",
+          "title"
+        ]
+      },
+      "warnings": [
+        "Missing expected CSV columns: ['current_location', 'linkedin', 'github', 'portfolio', 'headline', 'years_experience']"
+      ],
+      "errors": []
+    },
+    {
+      "source_id": "resume_docx",
+      "source_type": "resume_docx",
+      "source_name": "vansh_resume.docx",
+      "path": "data/samples/vansh_resume.docx",
+      "required": false,
+      "status": "ok",
+      "content_type": "text",
+      "metadata": {
+        "paragraph_count": 26,
+        "table_count": 8,
+        "character_count": 3269,
+        "has_extractable_text": true
+      },
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "overall_status": "completed_with_warnings",
+  "warnings": [
+    "recruiter_csv: Missing expected CSV columns: ['current_location', 'linkedin', 'github', 'portfolio', 'headline', 'years_experience']"
+  ],
+  "errors": []
+}
