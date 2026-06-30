@@ -1,0 +1,673 @@
+{
+  "run_id": "sample_candidate_run_001",
+  "status": "completed_with_warnings",
+  "projected_output": {
+    "candidate_id": "cand_5a82b6cfa6",
+    "full_name": "Vansh Bhardwaj",
+    "emails": [
+      "vansh.bhardwaj.ug23@nsut.ac.in"
+    ],
+    "phones": [
+      "+919958413469"
+    ],
+    "location": {
+      "city": "Gurugram",
+      "region": "Hr",
+      "country": null,
+      "raw": "Gurugram, HR"
+    },
+    "links": {
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "other": [
+        "https://vansh.bhardwaj.ug",
+        "https://nsut.ac.in",
+        "https://b.tech"
+      ]
+    },
+    "headline": "Data Science Intern - IndiGo June 2026 - Present",
+    "years_experience": null,
+    "skills": [
+      {
+        "name": "C++",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Css",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Git",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Github",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Html",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Java",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Javascript",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Matplotlib",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Mysql",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Numpy",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Pandas",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Python",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "SQL",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      }
+    ],
+    "experience": null,
+    "education": [
+      {
+        "institution": null,
+        "degree": null,
+        "field": "Year | Course | Institute | Grade\n2023-2027 | B.Tech (Information Technology) | Netaji Subhas University of Technology | 8.65\n2021-22 | Class XII, CBSE Board | Lawrence Public School, New Delhi | 96.8%\n2019-20 | Class X, CBSE Board | Lawrence Public School, New Delhi | 93.8%",
+        "end_year": null
+      }
+    ],
+    "overall_confidence": 0.67,
+    "_provenance": {
+      "candidate_id": [],
+      "full_name": [
+        {
+          "field": "full_name",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + name_text_cleanup",
+          "raw_value": "Vansh Bhardwaj",
+          "normalized_value": "Vansh Bhardwaj",
+          "confidence": 0.95,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "full_name",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "resume_header_name_heuristic + name_text_cleanup",
+          "raw_value": "VANSH BHARDWAJ",
+          "normalized_value": "VANSH BHARDWAJ",
+          "confidence": 0.7,
+          "selected": false,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "emails": [
+        {
+          "field": "emails",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + email_lowercase_validate",
+          "raw_value": "vansh.bhardwaj.ug23@nsut.ac.in",
+          "normalized_value": "vansh.bhardwaj.ug23@nsut.ac.in",
+          "confidence": 0.95,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "emails",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "email_regex + email_lowercase_validate",
+          "raw_value": "vansh.bhardwaj.ug23@nsut.ac.in",
+          "normalized_value": "vansh.bhardwaj.ug23@nsut.ac.in",
+          "confidence": 0.95,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "phones": [
+        {
+          "field": "phones",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + phone_e164_basic",
+          "raw_value": "+919958413469",
+          "normalized_value": "+919958413469",
+          "confidence": 0.9,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "phones",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "phone_regex + phone_e164_basic",
+          "raw_value": "+91-9958413469",
+          "normalized_value": "+919958413469",
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "location": [
+        {
+          "field": "location",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + location_simple_parse",
+          "raw_value": "Gurugram, HR",
+          "normalized_value": {
+            "city": "Gurugram",
+            "region": "Hr",
+            "country": null,
+            "raw": "Gurugram, HR"
+          },
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": [
+            "Could not confidently infer country code."
+          ]
+        }
+      ],
+      "links": [
+        {
+          "field": "links.other",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "url_regex + url_https_normalize",
+          "raw_value": "vansh.bhardwaj.ug",
+          "normalized_value": "https://vansh.bhardwaj.ug",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "links.other",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "url_regex + url_https_normalize",
+          "raw_value": "nsut.ac.in",
+          "normalized_value": "https://nsut.ac.in",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "links.other",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "url_regex + url_https_normalize",
+          "raw_value": "B.Tech",
+          "normalized_value": "https://b.tech",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "headline": [
+        {
+          "field": "headline",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "resume_early_line_headline_heuristic + headline_text_cleanup",
+          "raw_value": "Data Science Intern - IndiGo\t\t\t\t\t\t\t\t\t  June 2026 - Present",
+          "normalized_value": "Data Science Intern - IndiGo June 2026 - Present",
+          "confidence": 0.6,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "years_experience": [],
+      "skills": [
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + skill_alias_canonical",
+          "raw_value": "Python, Machine Learning, C++, SQL",
+          "normalized_value": "Python",
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + skill_alias_canonical",
+          "raw_value": "Python, Machine Learning, C++, SQL",
+          "normalized_value": "Machine Learning",
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + skill_alias_canonical",
+          "raw_value": "Python, Machine Learning, C++, SQL",
+          "normalized_value": "C++",
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "recruiter_csv",
+            "source_type": "recruiter_csv",
+            "source_name": "recruiter.csv",
+            "status": "ok"
+          },
+          "method": "csv_column_mapping + skill_alias_canonical",
+          "raw_value": "Python, Machine Learning, C++, SQL",
+          "normalized_value": "SQL",
+          "confidence": 0.85,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "C++",
+          "normalized_value": "C++",
+          "confidence": 0.75,
+          "selected": false,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "CSS",
+          "normalized_value": "CSS",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Git",
+          "normalized_value": "Git",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "GitHub",
+          "normalized_value": "GitHub",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "HTML",
+          "normalized_value": "HTML",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Java",
+          "normalized_value": "Java",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Javascript",
+          "normalized_value": "Javascript",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Machine Learning",
+          "normalized_value": "Machine Learning",
+          "confidence": 0.75,
+          "selected": false,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Matplotlib",
+          "normalized_value": "Matplotlib",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "MySQL",
+          "normalized_value": "MySQL",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Numpy",
+          "normalized_value": "Numpy",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Pandas",
+          "normalized_value": "Pandas",
+          "confidence": 0.75,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "Python",
+          "normalized_value": "Python",
+          "confidence": 0.75,
+          "selected": false,
+          "conflict": false,
+          "warnings": []
+        },
+        {
+          "field": "skills",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "known_skill_dictionary_match + skill_alias_canonical",
+          "raw_value": "SQL",
+          "normalized_value": "SQL",
+          "confidence": 0.75,
+          "selected": false,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "experience": [],
+      "education": [
+        {
+          "field": "education",
+          "source": {
+            "source_id": "resume_docx",
+            "source_type": "resume_docx",
+            "source_name": "vansh_resume.docx",
+            "status": "ok"
+          },
+          "method": "resume_education_section + generic_text_cleanup",
+          "raw_value": "Year | Course | Institute | Grade\n2023-2027 | B.Tech (Information Technology) | Netaji Subhas University of Technology | 8.65\n2021-22 | Class XII, CBSE Board | Lawrence Public School, New Delhi | 96.8%\n2019-20 | Class X, CBSE Board | Lawrence Public School, New Delhi | 93.8%",
+          "normalized_value": "Year | Course | Institute | Grade\n2023-2027 | B.Tech (Information Technology) | Netaji Subhas University of Technology | 8.65\n2021-22 | Class XII, CBSE Board | Lawrence Public School, New Delhi | 96.8%\n2019-20 | Class X, CBSE Board | Lawrence Public School, New Delhi | 93.8%",
+          "confidence": 0.65,
+          "selected": true,
+          "conflict": false,
+          "warnings": []
+        }
+      ],
+      "overall_confidence": []
+    },
+    "_confidence": {
+      "candidate_id": null,
+      "full_name": 0.95,
+      "emails": 0.95,
+      "phones": 0.875,
+      "location": 0.85,
+      "links": 0.75,
+      "headline": 0.6,
+      "years_experience": null,
+      "skills": 0.7786,
+      "experience": null,
+      "education": 0.65,
+      "overall_confidence": 0.6674
+    }
+  },
+  "warnings": [
+    "recruiter_csv: Missing expected CSV columns: ['current_location', 'linkedin', 'github', 'portfolio', 'headline', 'years_experience']"
+  ],
+  "errors": []
+}
