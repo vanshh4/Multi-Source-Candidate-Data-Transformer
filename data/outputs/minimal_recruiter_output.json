@@ -1,0 +1,136 @@
+{
+  "run_id": "sample_candidate_run_001",
+  "status": "completed_with_warnings",
+  "projected_output": {
+    "id": "cand_5a82b6cfa6",
+    "name": "Vansh Bhardwaj",
+    "email": [
+      "vansh.bhardwaj.ug23@nsut.ac.in"
+    ],
+    "phone": [
+      "+919958413469"
+    ],
+    "city": "Gurugram",
+    "headline": "Data Science Intern - IndiGo June 2026 - Present",
+    "years_experience": null,
+    "skills": [
+      {
+        "name": "C++",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Css",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Git",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Github",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Html",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Java",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Javascript",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Matplotlib",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Mysql",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Numpy",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Pandas",
+        "confidence": 0.75,
+        "sources": [
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "Python",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      },
+      {
+        "name": "SQL",
+        "confidence": 0.85,
+        "sources": [
+          "recruiter_csv",
+          "resume_docx"
+        ]
+      }
+    ],
+    "_confidence": {
+      "id": null,
+      "name": 0.95,
+      "email": 0.95,
+      "phone": 0.875,
+      "city": null,
+      "headline": 0.6,
+      "years_experience": null,
+      "skills": 0.7786,
+      "linkedin": null
+    }
+  },
+  "warnings": [
+    "recruiter_csv: Missing expected CSV columns: ['current_location', 'linkedin', 'github', 'portfolio', 'headline', 'years_experience']"
+  ],
+  "errors": []
+}
