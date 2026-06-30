@@ -5,3 +5,4 @@ pdfplumber
 PyYAML
 jsonschema
 pytest
+streamlit
