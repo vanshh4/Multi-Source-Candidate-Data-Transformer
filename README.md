@@ -651,7 +651,7 @@ pip install -r requirements.txt
 ### 12.2 Start the UI
 
 ```bash
-PYTHONPATH=src streamlit run ui/streamlit_app.py
+set PYTHONPATH=src && python -m streamlit run ui\streamlit_app.py
 ```
 
 On Windows PowerShell:
