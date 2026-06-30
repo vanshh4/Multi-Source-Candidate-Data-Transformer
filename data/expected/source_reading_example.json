@@ -1,0 +1,81 @@
+{
+  "run_id": "sample_candidate_run_001",
+  "description": "Expected reader-layer output before extraction, normalization, merge, and projection. This file is used to verify that input readers safely load available sources and report warnings/errors without crashing.",
+  "manifest_path": "configs/sample_input_manifest.yaml",
+  "sources": [
+    {
+      "source_id": "recruiter_csv",
+      "source_type": "recruiter_csv",
+      "source_name": "recruiter.csv",
+      "path": "data/samples/recruiter.csv",
+      "required": false,
+      "status": "ok",
+      "content_type": "tabular",
+      "reader": "csv_reader",
+      "extraction_method": "pandas_read_csv",
+      "metadata": {
+        "encoding": "utf-8",
+        "row_count": 1,
+        "column_count": null,
+        "columns": [
+          "candidate_name",
+          "email",
+          "phone",
+          "location",
+          "current_company",
+          "title",
+          "skills"
+        ]
+      },
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "source_id": "resume_docx",
+      "source_type": "resume_docx",
+      "source_name": "vansh_resume.docx",
+      "path": "data/samples/vansh_resume.docx",
+      "required": false,
+      "status": "ok",
+      "content_type": "text",
+      "reader": "docx_reader",
+      "extraction_method": "python_docx_paragraph_text",
+      "metadata": {
+        "page_count": null,
+        "paragraph_count": null,
+        "character_count": null,
+        "has_extractable_text": true
+      },
+      "warnings": [],
+      "errors": []
+    },
+    {
+      "source_id": "sample_resume_text",
+      "source_type": "resume_txt",
+      "source_name": "sample_resume_text.txt",
+      "path": "data/samples/sample_resume_text.txt",
+      "required": false,
+      "status": "ok",
+      "content_type": "text",
+      "reader": "text_reader",
+      "extraction_method": "plain_text_read",
+      "metadata": {
+        "encoding": "utf-8",
+        "line_count": null,
+        "character_count": null,
+        "has_extractable_text": true
+      },
+      "warnings": [],
+      "errors": []
+    }
+  ],
+  "expected_reader_behavior": {
+    "missing_source": "Return status='missing', empty content, and warning. Do not crash.",
+    "empty_source": "Return status='empty', empty content, and warning. Do not invent values.",
+    "malformed_source": "Return status='malformed' or 'unreadable', preserve error message in errors/warnings, and continue if source is not required.",
+    "successful_source": "Return status='ok' with parsed dataframe/text and metadata."
+  },
+  "overall_status": "completed",
+  "warnings": [],
+  "errors": []
+}
