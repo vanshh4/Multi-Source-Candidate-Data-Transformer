@@ -284,7 +284,7 @@ PYTHONPATH=src pytest tests
 Run the full test suite:
 
 ```bash
-PYTHONPATH=src pytest tests
+set PYTHONPATH=src && pytest tests
 ```
 
 On Windows PowerShell:
