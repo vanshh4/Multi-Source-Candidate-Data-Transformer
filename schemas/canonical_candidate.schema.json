@@ -1,0 +1,420 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/canonical_candidate.schema.json",
+  "title": "CanonicalCandidate",
+  "description": "Internal canonical candidate profile produced by the transformer before runtime projection. Unknown values must be represented as null or empty arrays/objects as defined; never invented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "full_name",
+    "emails",
+    "phones",
+    "location",
+    "links",
+    "headline",
+    "years_experience",
+    "skills",
+    "experience",
+    "education",
+    "provenance",
+    "overall_confidence"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable candidate identifier generated from normalized identity fields when possible, otherwise generated UUID-like identifier. Should not expose raw PII."
+    },
+    "full_name": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "description": "Candidate full name after normalization. Null when unavailable or unreliable."
+    },
+    "emails": {
+      "type": "array",
+      "description": "Lowercase, validated, deduplicated email addresses.",
+      "items": {
+        "type": "string",
+        "format": "email"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "phones": {
+      "type": "array",
+      "description": "Phone numbers normalized to E.164 format where possible.",
+      "items": {
+        "type": "string",
+        "pattern": "^\\+[1-9]\\d{1,14}$"
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "location": {
+      "description": "Structured location. Country should use ISO-3166 alpha-2 where known.",
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/location"
+        }
+      ]
+    },
+    "links": {
+      "$ref": "#/$defs/links"
+    },
+    "headline": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Short professional headline extracted from resume or structured source. Null if unavailable."
+    },
+    "years_experience": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 80,
+      "description": "Total professional experience in years as a decimal number, for example 2.5. Null if unavailable."
+    },
+    "skills": {
+      "type": "array",
+      "description": "Canonical skill objects with field-level confidence and source references.",
+      "items": {
+        "$ref": "#/$defs/skill"
+      },
+      "default": []
+    },
+    "experience": {
+      "type": "array",
+      "description": "Employment or project experience entries normalized from resume/CSV.",
+      "items": {
+        "$ref": "#/$defs/experience_item"
+      },
+      "default": []
+    },
+    "education": {
+      "type": "array",
+      "description": "Education entries normalized from resume/CSV.",
+      "items": {
+        "$ref": "#/$defs/education_item"
+      },
+      "default": []
+    },
+    "provenance": {
+      "type": "array",
+      "description": "Field-level provenance records describing where each selected or rejected candidate value came from and how it was produced.",
+      "items": {
+        "$ref": "#/$defs/provenance_item"
+      },
+      "default": []
+    },
+    "overall_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Weighted confidence score for the canonical candidate record, from 0 to 1."
+    }
+  },
+  "$defs": {
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "city",
+        "region",
+        "country",
+        "raw"
+      ],
+      "properties": {
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "State, province, territory, or region."
+        },
+        "country": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO-3166 alpha-2 country code when known, for example IN."
+        },
+        "raw": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Original location text or best raw representation."
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "linkedin",
+        "github",
+        "portfolio",
+        "other"
+      ],
+      "properties": {
+        "linkedin": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "github": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "portfolio": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "other": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+    "skill": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "confidence",
+        "sources"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Canonical skill name, for example Power BI."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "description": "Source identifiers where this skill was observed."
+        }
+      }
+    },
+    "experience_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "company",
+        "title",
+        "start",
+        "end",
+        "summary"
+      ],
+      "properties": {
+        "company": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+          "description": "Start date as YYYY-MM when known."
+        },
+        "end": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(\\d{4}-(0[1-9]|1[0-2])|present)$",
+          "description": "End date as YYYY-MM, present, or null."
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "education_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "institution",
+        "degree",
+        "field",
+        "end_year"
+      ],
+      "properties": {
+        "institution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "degree": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "field": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "end_year": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1900,
+          "maximum": 2100
+        }
+      }
+    },
+    "provenance_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field",
+        "source",
+        "method",
+        "confidence",
+        "selected"
+      ],
+      "properties": {
+        "field": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Canonical field path, for example full_name or location.city."
+        },
+        "source": {
+          "$ref": "#/$defs/source_ref"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Extraction, normalization, or merge method used."
+        },
+        "raw_value": {
+          "description": "Original extracted value before normalization. May be any JSON value or null."
+        },
+        "normalized_value": {
+          "description": "Normalized value considered for the canonical record. May be any JSON value or null."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "selected": {
+          "type": "boolean",
+          "description": "Whether this value was selected into the canonical output."
+        },
+        "conflict": {
+          "type": "boolean",
+          "default": false
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": []
+        }
+      }
+    },
+    "source_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_type",
+        "source_name",
+        "status"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "recruiter_csv",
+            "resume_pdf",
+            "resume_docx",
+            "unknown"
+          ]
+        },
+        "source_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "File name or logical source name."
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ok",
+            "missing",
+            "empty",
+            "malformed",
+            "unreadable",
+            "partial"
+          ]
+        }
+      }
+    }
+  }
+}

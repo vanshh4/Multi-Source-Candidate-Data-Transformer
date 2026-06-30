@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/projection_config.schema.json",
+  "title": "ProjectionConfig",
+  "description": "Runtime configuration for projecting the internal canonical candidate record into a requested output shape without changing extraction, normalization, or merge code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "output"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Projection config version, for example 1.0."
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fields"
+      ],
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional logical name for this output profile."
+        },
+        "fields": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Requested output fields mapped from canonical paths.",
+          "items": {
+            "$ref": "#/$defs/field_projection"
+          }
+        }
+      }
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "default": {},
+      "properties": {
+        "include_provenance": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to include provenance in the projected output. Internal provenance is still calculated."
+        },
+        "include_confidence": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether to include confidence values in the projected output. Internal confidence is still calculated."
+        },
+        "missing_default": {
+          "type": "string",
+          "enum": [
+            "null",
+            "omit",
+            "error"
+          ],
+          "default": "null",
+          "description": "Default behavior when a requested canonical path is unavailable."
+        },
+        "validation_mode": {
+          "type": "string",
+          "enum": [
+            "strict",
+            "lenient"
+          ],
+          "default": "strict",
+          "description": "Strict mode fails validation on missing:error or invalid output types; lenient mode returns warnings where safe."
+        },
+        "additional_output_properties": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether projected output may contain properties not explicitly requested. Recommended false."
+        }
+      }
+    }
+  },
+  "$defs": {
+    "field_projection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "output_name",
+        "path"
+      ],
+      "properties": {
+        "output_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*$",
+          "description": "Field name to emit in the projected output."
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*$",
+          "description": "Canonical field path, for example full_name, location.city, or links.linkedin."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "array",
+            "object",
+            "null"
+          ],
+          "description": "Optional expected output type after projection and normalization."
+        },
+        "missing": {
+          "type": "string",
+          "enum": [
+            "null",
+            "omit",
+            "error"
+          ],
+          "description": "Field-level missing behavior. Overrides options.missing_default."
+        },
+        "normalization": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/normalization_name"
+            },
+            {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/normalization_name"
+              },
+              "uniqueItems": true
+            }
+          ],
+          "description": "Optional output-specific normalization rule or ordered list of rules."
+        },
+        "required": {
+          "type": "boolean",
+          "default": false,
+          "description": "Convenience flag. If true, implementation should treat missing as error unless explicitly set otherwise."
+        },
+        "description": {
+          "type": "string"
+        },
+        "include_provenance": {
+          "type": "boolean",
+          "description": "Optional field-level override for provenance exposure."
+        },
+        "include_confidence": {
+          "type": "boolean",
+          "description": "Optional field-level override for confidence exposure."
+        }
+      }
+    },
+    "normalization_name": {
+      "type": "string",
+      "enum": [
+        "none",
+        "trim",
+        "collapse_spaces",
+        "lowercase",
+        "uppercase",
+        "title_case",
+        "email_lowercase",
+        "e164_phone",
+        "iso_country_alpha2",
+        "https_url",
+        "sorted_unique",
+        "skill_canonical",
+        "round_1_decimal",
+        "round_2_decimal"
+      ]
+    }
+  }
+}
