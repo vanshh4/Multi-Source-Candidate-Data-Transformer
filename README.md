@@ -935,11 +935,7 @@ set PYTHONPATH=src && python -m transformer.cli --manifest configs/sample_input_
 Run minimal recruiter output:
 
 ```bash
-PYTHONPATH=src python -m transformer.cli \
-  --manifest configs/sample_input_manifest.yaml \
-  --project \
-  --config configs/minimal_recruiter_view.yaml \
-  --output data/outputs/minimal_recruiter_output.json
+set PYTHONPATH=src && python -m transformer.cli --manifest configs/sample_input_manifest.yaml --project --config configs/minimal_recruiter_view.yaml --output data/outputs/minimal_recruiter_output.json
 ```
 
 Run UI:
