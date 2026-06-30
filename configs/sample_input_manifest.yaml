@@ -1,0 +1,25 @@
+run:
+  run_id: sample_candidate_run_001
+  description: Sample Phase 1 run using recruiter CSV and one resume file for the candidate transformer.
+inputs:
+  recruiter_csv:
+    path: data/samples/recruiter.csv
+    required: false
+    source_id: recruiter_csv
+    source_type: recruiter_csv
+  resume:
+    path: data/samples/resume.docx
+    type: docx
+    required: false
+    source_id: resume_docx
+    source_type: resume_docx
+projection:
+  config_path: configs/default_projection.yaml
+output:
+  path: data/outputs/default_candidate_output.json
+  pretty_print: true
+runtime:
+  fail_on_source_error: false
+  unknown_value_policy: 'null'
+  preserve_provenance: true
+  preserve_confidence: true
