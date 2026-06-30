@@ -1,0 +1,13 @@
+data/ui_uploads/*
+!data/ui_uploads/.gitkeep
+
+data/ui_runs/*
+!data/ui_runs/.gitkeep
+
+data/outputs/ui/*
+!data/outputs/ui/.gitkeep
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/
