@@ -1,0 +1,55 @@
+VANSH BHARDWAJ
+Delhi, IN | vansh.bhardwaj.ug23@nsut.ac.in | +91-9958413469
+Leetcode | GitHub | LinkedIn | GeeksforGeeks
+
+EDUCATION
+
+Year Course Institute Grade
+2023-2027 B.Tech (Information Technology) Netaji Subhas University of Technology 8.65
+2021-22 Class XII, CBSE Board Lawrence Public School, New Delhi 96.8%
+2019-20 Class X, CBSE Board Lawrence Public School, New Delhi 93.8%
+
+EXPERIENCE
+
+Data Science Intern - IndiGo June 2026 - Present
+Developing a multi-class Machine Learning model to classify Mandatory Occurrence Reports (MORs) from incoming Flight Safety incident reports, improving incident triaging and regulatory compliance.
+Developing scalable data pipelines and workflow automation solutions to transform unstructured aviation safety reports into structured insights while ensuring DGCA regulatory compliance.
+
+PROJECTS
+
+ERiCA | (Python, LangGraph, win32com, Pandas, OpenPyXL, Pathlib,OS, Datetime/Time, TypedDict)
+Designed and developed ERiCA, a LangGraph-powered autonomous AI agent for automated aviation safety report classification using ERCS, ARMS, and 5x5 risk assessment frameworks.
+Built a modular LangGraph StateGraph workflow comprising queue management, intent classification, validation, and execution agents for reliable end-to-end processing.
+
+Smart Traffic Light Control System | ( Python, OpenCV, YOLOv8, NumPy, Pygame, Matplotlib, Pandas)
+Developed a Computer Vision-based smart traffic management system using YOLOv8 and OpenCV to dynamically optimize traffic signal timing based on real-time vehicle density.
+Implemented emergency vehicle prioritization (Green Corridor) logic to reduce emergency response delays and improve traffic efficiency by approximately 80%.
+
+CERTIFICATIONS
+
+Amazon ML Summer School 2025 | Amazon India
+Selected among top 3000 applicants out of 60k+ participants nationwide for an intensive, invite-only training program focused on advanced machine learning topics.
+
+Google AI Essentials | Google
+Completed Google's AI Essentials program covering Prompt Engineering, Generative AI, Responsible AI, LLM applications, and AI-assisted productivity workflows.
+
+SKILLS
+
+Languages : C++, Python, Java, MySQL, HTML5, CSS, JavaScript 
+Developer Tools : Git/GitHub, VS Code, PyCharm, Figma, Canva, MATLAB
+Relevant Coursework : OS, DBMS, Computer Networks, OOPs, DSA, Design & Analysis of Algorithms
+
+POSITIONS OF RESPONSIBILITY
+
+President - Enactus NSUT
+Leading Enactus NSUT, a 120-member organization, by overseeing strategic planning, project execution, stakeholder coordination, and representing the college at the Enactus India National Exposition 2024 and 2025.
+Led Project Srijan by managing a cross-functional team of 20+ members, delivering 500+ customized calendars and executing multiple corporate orders while ensuring timely project delivery.
+
+Director - Nalum (Alumni Society of NSUT)
+Managing alumni database operations for 5000+ alumni while coordinating networking events through Nalum’s website.
+Organized Alumni Meet-2025 & Silver Jubilee Function leading a team of 100+ volunteers.
+
+ACHIEVEMENTS
+
+Solved 350+ Data Structures & Algorithms problems across different coding platforms.
+Secured Department Rank 1 in the 5th and 6th semesters with SGPAs of 9.33 and 9.17 respectively.

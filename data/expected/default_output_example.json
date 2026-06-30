@@ -1,0 +1,125 @@
+{
+  "candidate_id": "cand_sample_001",
+  "full_name": "Vansh Bhardwaj",
+  "emails": [
+    "vansh.bhardwaj.ug23@nsut.ac.in"
+  ],
+  "phones": [
+    "+919958413469"
+  ],
+  "location": {
+    "city": "Delhi",
+    "region": "Delhi",
+    "country": "IN",
+    "raw": "Delhi, IN"
+  },
+  "links": {
+    "linkedin": "https://linkedin.com/in/vanshbhardwaj",
+    "github": "https://github.com/vansh",
+    "portfolio": null,
+    "other": [
+      "https://leetcode.com/vansh",
+      "https://auth.geeksforgeeks.org/user/vansh"
+    ]
+  },
+  "headline": "Data Science Intern at IndiGo",
+  "years_experience": 0.1,
+  "skills": [
+    {
+      "name": "Python",
+      "confidence": 0.95,
+      "sources": [
+        "recruiter_csv",
+        "resume_docx"
+      ]
+    },
+    {
+      "name": "Machine Learning",
+      "confidence": 0.9,
+      "sources": [
+        "recruiter_csv",
+        "resume_docx"
+      ]
+    },
+    {
+      "name": "C++",
+      "confidence": 0.95,
+      "sources": [
+        "recruiter_csv",
+        "resume_docx"
+      ]
+    },
+    {
+      "name": "SQL",
+      "confidence": 0.8,
+      "sources": [
+        "recruiter_csv"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "IndiGo",
+      "title": "Data Science Intern",
+      "start": "2026-06",
+      "end": "present",
+      "summary": "Developing a multi-class Machine Learning model to classify Mandatory Occurrence Reports (MORs) from incoming Flight Safety incident reports, improving incident triaging and regulatory compliance. Developing scalable data pipelines and workflow automation solutions."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Netaji Subhas University of Technology",
+      "degree": "B.Tech",
+      "field": "Information Technology",
+      "end_year": 2027
+    },
+    {
+      "institution": "Lawrence Public School, New Delhi",
+      "degree": "Class XII",
+      "field": "CBSE Board",
+      "end_year": 2022
+    }
+  ],
+  "provenance": [
+    {
+      "field": "location",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "spacy_ner_location",
+      "raw_value": "Delhi, IN",
+      "normalized_value": {
+        "city": "Delhi",
+        "region": "Delhi",
+        "country": "IN",
+        "raw": "Delhi, IN"
+      },
+      "confidence": 0.85,
+      "selected": true,
+      "conflict": true,
+      "warnings": [
+        "Conflicting value 'Gurugram, HR' found in recruiter_csv. Resolved using resume_docx based on recency assumption."
+      ]
+    },
+    {
+      "field": "title",
+      "source": {
+        "source_id": "recruiter_csv",
+        "source_type": "recruiter_csv",
+        "source_name": "recruiter.csv",
+        "status": "ok"
+      },
+      "method": "csv_column_mapping",
+      "raw_value": "Data Science & ML Intern",
+      "normalized_value": "Data Science & ML Intern",
+      "confidence": 0.9,
+      "selected": false,
+      "conflict": true,
+      "warnings": []
+    }
+  ],
+  "overall_confidence": 0.91
+}
