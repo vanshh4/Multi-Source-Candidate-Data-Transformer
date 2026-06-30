@@ -1,0 +1,222 @@
+{
+  "candidate_id": "cand_7153d773a0",
+  "full_name": "Sample Candidate",
+  "emails": [
+    "sample@example.com"
+  ],
+  "phones": [
+    "+919999999999"
+  ],
+  "location": {
+    "city": "Delhi",
+    "region": "Delhi",
+    "country": "IN",
+    "raw": "Delhi, India"
+  },
+  "links": {
+    "linkedin": "https://linkedin.com/in/samplecandidate",
+    "github": null,
+    "portfolio": null,
+    "other": []
+  },
+  "headline": "Data Analyst Intern",
+  "years_experience": 1.0,
+  "skills": [
+    {
+      "name": "Python",
+      "confidence": 0.9,
+      "sources": [
+        "resume_docx"
+      ]
+    },
+    {
+      "name": "SQL",
+      "confidence": 0.9,
+      "sources": [
+        "resume_docx"
+      ]
+    }
+  ],
+  "experience": [],
+  "education": [
+    {
+      "institution": null,
+      "degree": null,
+      "field": "B.Tech Computer Science\nXYZ University\n2025",
+      "end_year": null
+    }
+  ],
+  "provenance": [
+    {
+      "field": "full_name",
+      "source": {
+        "source_id": "recruiter_csv",
+        "source_type": "recruiter_csv",
+        "source_name": "recruiter.csv",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "Sample Candidate",
+      "normalized_value": "Sample Candidate",
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "headline",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "Data Analyst Intern",
+      "normalized_value": "Data Analyst Intern",
+      "confidence": 0.8,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "years_experience",
+      "source": {
+        "source_id": "recruiter_csv",
+        "source_type": "recruiter_csv",
+        "source_name": "recruiter.csv",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": 1.0,
+      "normalized_value": 1.0,
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "emails",
+      "source": {
+        "source_id": "recruiter_csv",
+        "source_type": "recruiter_csv",
+        "source_name": "recruiter.csv",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "sample@example.com",
+      "normalized_value": "sample@example.com",
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "phones",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "+919999999999",
+      "normalized_value": "+919999999999",
+      "confidence": 0.85,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "location",
+      "source": {
+        "source_id": "recruiter_csv",
+        "source_type": "recruiter_csv",
+        "source_name": "recruiter.csv",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": {
+        "city": "Delhi",
+        "region": "Delhi",
+        "country": "IN",
+        "raw": "Delhi, India"
+      },
+      "normalized_value": {
+        "city": "Delhi",
+        "region": "Delhi",
+        "country": "IN",
+        "raw": "Delhi, India"
+      },
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "links.linkedin",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "https://linkedin.com/in/samplecandidate",
+      "normalized_value": "https://linkedin.com/in/samplecandidate",
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "skills",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "Python",
+      "normalized_value": "Python",
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "skills",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "SQL",
+      "normalized_value": "SQL",
+      "confidence": 0.9,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    },
+    {
+      "field": "education",
+      "source": {
+        "source_id": "resume_docx",
+        "source_type": "resume_docx",
+        "source_name": "vansh_resume.docx",
+        "status": "ok"
+      },
+      "method": "example_method + example_normalizer",
+      "raw_value": "B.Tech Computer Science\nXYZ University\n2025",
+      "normalized_value": "B.Tech Computer Science\nXYZ University\n2025",
+      "confidence": 0.65,
+      "selected": true,
+      "conflict": false,
+      "warnings": []
+    }
+  ],
+  "overall_confidence": 0.783
+}
