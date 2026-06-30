@@ -1,0 +1,41 @@
+{
+  "id": "cand_123",
+  "name": "Sample Candidate",
+  "email": [
+    "sample@example.com"
+  ],
+  "phone": [
+    "+919999999999"
+  ],
+  "city": "Delhi",
+  "headline": "Data Analyst Intern",
+  "years_experience": 1.0,
+  "skills": [
+    {
+      "name": "Python",
+      "confidence": 0.9,
+      "sources": [
+        "resume_docx"
+      ]
+    },
+    {
+      "name": "SQL",
+      "confidence": 0.88,
+      "sources": [
+        "resume_docx"
+      ]
+    }
+  ],
+  "linkedin": "https://linkedin.com/in/samplecandidate",
+  "_confidence": {
+    "id": 1.0,
+    "name": 0.9,
+    "email": 0.95,
+    "phone": 0.85,
+    "city": null,
+    "headline": null,
+    "years_experience": null,
+    "skills": 0.9,
+    "linkedin": 0.9
+  }
+}
