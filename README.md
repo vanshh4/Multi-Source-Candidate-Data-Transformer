@@ -917,7 +917,7 @@ set PYTHONPATH=src && pytest tests
 Run source reading:
 
 ```bash
-PYTHONPATH=src python -m transformer.cli --manifest configs/sample_input_manifest.yaml
+set PYTHONPATH=src && python -m transformer.cli --manifest configs/sample_input_manifest.yaml
 ```
 
 Run full pipeline:
