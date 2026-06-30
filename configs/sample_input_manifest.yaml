@@ -8,7 +8,7 @@ inputs:
     source_id: recruiter_csv
     source_type: recruiter_csv
   resume:
-    path: data/samples/resume.docx
+    path: data/samples/vansh_resume.docx
     type: docx
     required: false
     source_id: resume_docx
